@@ -1,0 +1,93 @@
+.index_hiro{
+    width: 100%;
+    height: 100vh;
+    background-image: url("/img/index_Holly.png");
+    background-position: center;
+    position: relative;
+
+
+}
+
+.subcajitaIndex *{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.honk{
+    position: absolute;
+    height: 30%;
+}
+
+.inputs a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.tituloCancion{  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+border-radius: 5px;}
+
+/* Degradados */
+.degradado-azul1 {
+    background: linear-gradient(rgba(132,156,217,255),rgba(086,102,171,255));
+}  
+.degradado-azul2 {
+    background: linear-gradient(rgba(086,102,171,255),rgba(132,156,217,255));
+
+}  
+.degradado-azulCentral {
+    background: linear-gradient(rgba(132,156,217,255),rgba(106,209,255),rgba(132,156,217,255));
+} 
+.degradadoOpcionesLat{
+    background :  radial-gradient(rgb(228, 228, 240),rgba(74, 121, 241, 0.555));
+    border: 1px  silver solid ;
+    border-radius: 5px;
+    margin: 2px 10px ;
+    padding: 10px;
+}
+.degradadoOpcionesLat:hover{
+    background : rgb(201, 222, 247) ;
+    border: 1px  black solid ;
+
+}
+
+
+/* Redondeos */
+.roundEsquina1{
+    border-radius: 15px 0px 0px 0px;
+}
+.roundEsquina2{
+    border-radius: 0px 15px 0px 0px;
+}
+.roundEsquina3{
+    border-radius: 0px 0px 15px 0px;
+}
+.roundEsquina4{
+    border-radius: 0px 0px 0px 15px;
+}
+
+
+/* Scrolls */
+#containerScroll{
+    margin: 0px 10px;
+    padding: 0px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+#textoScroll{
+    /* animation properties */
+
+    transform: translateX(100%);
+    animation: scroll-texto-menu 15s linear infinite;
+}
+@keyframes scroll-texto-menu {
+    from {
+    transform: translateX(100%);
+    }
+    to {
+    transform: translateX(-100%);
+    }
+
+}
