@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/estilo.css">
     <script src="scriptNivel.js">
+
     </script>
 </head>
 <body>
@@ -16,16 +17,31 @@
 <section id="infoCancion ">
 <b>Puntuacion</b>
 
-<div id="puntitos"></div>
+<div id="puntitos">0</div>
 </section>
 
+<!-- Aqui se empieza el nivel.OSMEL ACUERDATE DE PONER QUE EL BOTON DESAPAREZCA! -->
+<div class="empezar">
+
+
+    <audio id="audioCancion">
+        <!-- Se declara aqui el audio -->
+        <source src="audio/aEscala.mp3" type="audio/mpeg">
+    </audio>
+    
+    <button class="btn" id="btnStart" onclick="playAudio()" disabled>Play</button>
+    <!-- debug -->
+    <span id="minutes"></span>:<span id="seconds"></span>
+</div>
 
 
 <section id="juego">
 <div class="container">
     <div class="row bg-success text-center">
-        <div class="col-6 offset-2 bg-danger">a</div>
-        <div class="col-3 bg-warning"> <button  class="btn bg-success bton-1" onclick="pulsaBoton()">clickame!</button></div>
+        <div class="col-6 offset-2 bg-danger ">
+            <!-- <div><img src="img/feverrr.gif" class="fever"></div> -->
+            a</div>
+        <div class="col-3 bg-warning"> <button  class="btn bg-success " id="bton-1"  onclick="pulsaBoton()">clickame!</button></div>
     </div>
 </div>
 
