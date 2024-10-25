@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/estilo.css">
     <script src="scriptNivel.js">
-
     </script>
+    
+
 </head>
 <body>
     
@@ -29,7 +30,7 @@
         <source src="audio/aEscala.mp3" type="audio/mpeg">
     </audio>
     
-    <button class="btn" id="btnStart" onclick="playAudio()" disabled>Play</button>
+    <button class="btn" id="btnStart" onclick="playAudio()" >Play</button>
     <!-- debug -->
     <span id="minutes"></span>:<span id="seconds"></span>
 </div>
@@ -41,7 +42,20 @@
         <div class="col-6 offset-2 bg-danger ">
             <!-- <div><img src="img/feverrr.gif" class="fever"></div> -->
             a</div>
-        <div class="col-3 bg-warning"> <button  class="btn bg-success " id="bton-1"  onclick="pulsaBoton()">clickame!</button></div>
+        <div class="col-3 bg-warning"> <button  class="btn" id="bton-1"  onclick="pulsaBoton()">clickame!</button></div>
+        <!-- <div class="col-3 bg-warning"> <button  class="btn bg-success " id="bton-1"  onclick=" dametiempos()">tiempo!</button></div> -->
+
+        <div id="tiempotabla">
+            <table>
+                <tr id="metemeaqui">
+
+                </tr>
+            </table>
+        </div>
+
+
+
+
     </div>
 </div>
 
