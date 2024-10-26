@@ -26,9 +26,10 @@ function playAudio() {
     x.play();
     // Una vez empieza el nivel, el botón de start desaparece
     document.getElementById("btnStart").remove();
-    // info
-    //https://www.w3schools.com/jsref/met_audio_play.asp
-//DEBUG y si, está copiaoypegao de los internetes
+
+//contador de tiempo 
+
+
 var sec = 0;
 function pad ( val ) { return val > 9 ? val : "0" + val; }
 setInterval( function(){
@@ -44,7 +45,10 @@ setInterval( function(){
 function pulsaBoton() {
     puntuacion = puntuacion + 1;
     document.getElementById('puntitos').innerText = puntuacion;
-    document.getElementById("bton-1").addClass('dale');
+    
+    //OJO CON ESTE TIPO DE MANERA DE TRABAJAR!!
+    variable= document.getElementById("bton-1")
+    $("#bton-1").addClass("dale")
 
     // document.getElementById("bton-1").disabled = true;
     // alert(puntuacion);
