@@ -103,4 +103,6 @@ border-radius: 5px;}
 .dale{ background-color: greenyellow;
 font-weight: bolder;
 }
+.dale:hover{ background-color: greenyellow;}
+
 .noDale{ background-color:red ;}
