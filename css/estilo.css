@@ -8,6 +8,10 @@
 
 }
 
+.imagenFFS img{
+width: 100%;
+}
+.hiroizq img{ width: 100%;}
 .subcajitaIndex *{
     font-weight: bold;
     color: black;
