@@ -36,7 +36,8 @@ function playAudio() {
 var sec = 0;
 function pad ( val ) { return val > 9 ? val : "0" + val; }
 setInterval( function(){
-    document.getElementById("seconds").innerHTML=pad(++sec%60);
+    document.getElementById("milisec").innerHTML=pad(sec%2);
+    document.getElementById("seconds").innerHTML=Math.trunc(pad(++sec%60)/2);
     document.getElementById("minutes").innerHTML=pad(parseInt(sec/60,10));
     let tiempoenVar= document.getElementById("minutes").innerText+':'+document.getElementById("seconds").innerText;
     audioNivel.onended = function(){alert="El nivel ha terminado! Tu puntuación es de "+puntuacion;};
@@ -54,7 +55,7 @@ setInterval( function(){
     }
     // document.getElementById('puntitos').innerText = tiempoenVar;
 
-}, 1000);
+}, 500);
 // Osmel! puede que elk truco para añadir milisegundos sea una variable mas y toqwuetear con el tiempo de aqui arriba!
 
 
