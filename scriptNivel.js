@@ -55,7 +55,7 @@ setInterval( function(){
     // document.getElementById('puntitos').innerText = tiempoenVar;
 
 }, 1000);
-
+// Osmel! puede que elk truco para añadir milisegundos sea una variable mas y toqwuetear con el tiempo de aqui arriba!
 
 
 
