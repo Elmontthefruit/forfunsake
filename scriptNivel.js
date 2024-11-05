@@ -31,6 +31,9 @@ function playAudio() {
     audioNivel.play();
     // Una vez empieza el nivel, el botón de start desaparece
     document.getElementById("btnStart").remove();
+    //añadido un gif normal
+    document.getElementById("animacionJuego").innerHTML='<img src="img/helltaker-static.gif" class="fever">';
+
 
 
 //contador de tiempo 
@@ -50,8 +53,10 @@ setInterval( function(){
 
 
     }else{
+            document.getElementById("animacionJuego").innerHTML='<img src="img/helltaker-static.gif" class="fever">'
         correcto=false;
         $("#bton-1").removeClass("dale");
+    
 
 
     }
@@ -71,14 +76,13 @@ function pulsaBoton() {
         puntuacion = puntuacion + 1;
         correcto= false;
         $("#bton-1").removeClass("dale");
+        document.getElementById("animacionJuego").innerHTML='<img src="img/helltaker-success.gif" class="fever">';
 
     } else {
             puntuacion=puntuacion-1
+            document.getElementById("animacionJuego").innerHTML='<img src="img/error.png" class="fever">'
         }
-        document.getElementById('puntitos').innerText = puntuacion;
-    //ignorame soy un debú
-    // document.getElementById('puntitos').innerText = puntuacion+"__"+correcto+"__";
-    
+        document.getElementById('puntitos').innerText = puntuacion;  
     //OJO CON ESTE TIPO DE MANERA DE TRABAJAR!!
     // variable= document.getElementById("bton-1")
     // $("#bton-1").addClass("dale")
@@ -86,12 +90,12 @@ function pulsaBoton() {
 }
 
 
-//extraer tiempo del contador
+//extraer tiempo del contador. Esto es debug
 
 function dametiempos(){
 let tiempoensecs= document.getElementById("seconds").innerText;
 let tiempoenmins=document.getElementById("minutes").innerText;
-//Creo que lña alerta para el contador!
+//Creo que la alerta para el contador! No uses alertas. Detienen el contador de tiempo pero no la musica
 //alert(tiempoenmins+'minutos y '+tiempoensecs+' segundos');
 document.getElementById('metemeaqui').innerHTML += "<p>"+tiempoenmins+":"+tiempoensecs+"--"+tiempoAccion[indexT-1]+"---"+indexT+"</p>";
 
