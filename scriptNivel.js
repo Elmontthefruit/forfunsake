@@ -9,7 +9,7 @@ let correcto=false;
 let indexT=0;
 
 let tiempoAccion=["00:14","00:25","00:33","00:43","00:46","00:52","01:03","01:12","01:21","01:24","01:39","01:43","01:46","01:49","01:53","01:57","02:00","02:02","02:07","02:15","02:21","02:28","02:30","02:39","02:42","02:47","02:49","02:53","02:57","03:00","03:08"]
-// let tiempoFin= "3:10";
+let tiempoFin= "03:10";
 
 // let longAccion= tiempoAccion.length;
 //debug longitudes arrays
@@ -17,14 +17,19 @@ let tiempoAccion=["00:14","00:25","00:33","00:43","00:46","00:52","01:03","01:12
 
 
 //Intento de funcion que pare el nivel
+//se ejecuta dentro de un alert. Podría tener el alert dentro...creo, pero como va bien...
+//Hay que añadir que actualice las puntuaciones más adelante
 function hastaHuevor() {
-    let text = "Press a button!\nEither OK or Cancel.";
+let puntuacionfinal=puntuacion/indexT
+puntuacionfinal.toFixed(2);
+if (puntuacionfinal<=0){ puntuacionfinal="0%; Pero si lo has hecho fatal! "} else {puntuacionfinal=(puntuacionfinal*100).toFixed(2)+"%"}
+    let text = "Fin del nivel! Tu puntiación es del..."+puntuacionfinal+" Pulsa 'aceptar' para volver al menu o 'cancelar' para reintentar.";
     if (confirm(text) == true) {
-        text = "You pressed OK!";
+        window.location.href = 'menuPrincipal.html';
     } else {
-        text = "You canceled!";
+        window.location.href = 'fase_pruebas.html';;
     }
-    document.getElementById("demo").innerHTML = text;
+    document.getElementById("demoAlerta").innerHTML = text;
 }
 
 
@@ -60,6 +65,9 @@ setInterval( function(){
         indexT=indexT+1;
         correcto=true;
 
+    }else if(tiempoenVar>=tiempoFin){
+        //Tiene que haber alerta!
+        alert(hastaHuevor());
 
     }else{
             document.getElementById("animacionJuego").innerHTML='<img src="img/helltaker-static.gif" class="fever">'
@@ -69,7 +77,8 @@ setInterval( function(){
 
 
     }
-    // document.getElementById('puntitos').innerText = tiempoenVar;
+
+    document.getElementById('puntitos').innerText = tiempoenVar+"--"+tiempoFin;
 
 }, 500);
 // Recuerda que esto se ejecuta cada medio segundo!
@@ -80,7 +89,8 @@ setInterval( function(){
 
 
 function pulsaBoton() {
-    dametiempos();
+//debug
+    // dametiempos();
         if (correcto==true){
         puntuacion = puntuacion + 1;
         correcto= false;
