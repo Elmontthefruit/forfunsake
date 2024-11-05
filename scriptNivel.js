@@ -16,7 +16,16 @@ let tiempoAccion=["00:14","00:25","00:33","00:43","00:46","00:52","01:03","01:12
 // alert (longAlerta);
 
 
-
+//Intento de funcion que pare el nivel
+function hastaHuevor() {
+    let text = "Press a button!\nEither OK or Cancel.";
+    if (confirm(text) == true) {
+        text = "You pressed OK!";
+    } else {
+        text = "You canceled!";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
 
 
 var audioNivel = new Audio();
