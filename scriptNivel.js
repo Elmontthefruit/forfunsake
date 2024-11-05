@@ -9,7 +9,7 @@ let correcto=false;
 let indexT=0;
 
 let tiempoAccion=["00:14","00:25","00:33","00:43","00:46","00:52","01:03","01:12","01:21","01:24","01:39","01:43","01:46","01:49","01:53","01:57","02:00","02:02","02:07","02:15","02:21","02:28","02:30","02:39","02:42","02:47","02:49","02:53","02:57","03:00","03:08"]
-// let tiempoFin= "1:38";
+// let tiempoFin= "3:10";
 
 // let longAccion= tiempoAccion.length;
 //debug longitudes arrays
@@ -58,7 +58,7 @@ setInterval( function(){
     // document.getElementById('puntitos').innerText = tiempoenVar;
 
 }, 500);
-// Osmel! puede que elk truco para añadir milisegundos sea una variable mas y toqwuetear con el tiempo de aqui arriba!
+// Recuerda que esto se ejecuta cada medio segundo!
 
 
 
