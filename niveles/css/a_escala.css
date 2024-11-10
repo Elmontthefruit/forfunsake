@@ -1,0 +1,17 @@
+/* 
+imagenes */
+/* -------------------------------------------- */
+.fever{
+    margin-left: 0;
+    width: 50%;
+}
+
+
+/* botones */
+/*------------------------------------------- */
+.dale{ background-color: greenyellow;
+font-weight: bolder;
+}
+.dale:hover{ background-color: greenyellow;}
+
+.noDale{ background-color:red ;}
