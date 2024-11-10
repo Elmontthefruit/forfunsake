@@ -77,8 +77,8 @@ setInterval( function(){
 
 
     }
-//debug
-    // document.getElementById('puntitos').innerText = tiempoenVar+"--"+tiempoFin;
+
+    document.getElementById('puntitos').innerText = tiempoenVar+"--"+tiempoFin;
 
 }, 500);
 // Recuerda que esto se ejecuta cada medio segundo!
@@ -89,6 +89,7 @@ setInterval( function(){
 
 
 function pulsaBoton() {
+//debug
     // dametiempos();
         if (correcto==true){
         puntuacion = puntuacion + 1;
@@ -114,8 +115,8 @@ function dametiempos(){
 let tiempoensecs= document.getElementById("seconds").innerText;
 let tiempoenmins=document.getElementById("minutes").innerText;
 //Creo que la alerta para el contador! No uses alertas. Detienen el contador de tiempo pero no la musica
-// //alert(tiempoenmins+'minutos y '+tiempoensecs+' segundos');
-// document.getElementById('metemeaqui').innerHTML += "<p>"+tiempoenmins+":"+tiempoensecs+"--"+tiempoAccion[indexT-1]+"---"+indexT+"</p>";
+//alert(tiempoenmins+'minutos y '+tiempoensecs+' segundos');
+document.getElementById('metemeaqui').innerHTML += "<p>"+tiempoenmins+":"+tiempoensecs+"--"+tiempoAccion[indexT-1]+"---"+indexT+"</p>";
 
 
 }
