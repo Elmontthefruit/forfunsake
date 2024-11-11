@@ -27,7 +27,8 @@
     }
     function insertar($usuario,$pass,$mail){
         // INSERT INTO `usuarios`(`nombreUsuario`, `passUsuario`, `imagenUsuario`, `mail`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
-        $insertar="INSERT INTO `usuarios`(`nombreUsuario`, `passUsuario`, `imagenUsuario`, `mail`) VALUES ('".$usuario."','".$pass."','0','".$mail."')";
+        $insertarS="INSERT INTO `usuarios`(`nombreUsuario`, `passUsuario`, `imagenUsuario`, `mail`) VALUES ('".$usuario."','".$pass."','0','".$mail."')";
+        return  $insertarS;
         //Ahora hay que hacer comprobaciones en la base de datos. Dios me asista
     }
 
@@ -77,24 +78,30 @@
                             $nomLog = $_REQUEST["usuario"];
                             $conLog = $_REQUEST["contraseña"];
                             $mailLog = $_REQUEST["mail"];
-                            echo (" Mail->" . $mailLog . " <br>");
-                            echo (" usuario->" . $nomLog . " <br>");
-                            echo (" pass->" . $conLog . " <br>");
-                            echo ("Datos recibidos! nwn");
-                            insertar($nomLog,$conLog,$mailLog);
+                            //debúuu
+                            // echo (" Mail->" . $mailLog . " <br>");
+                            // echo (" usuario->" . $nomLog . " <br>");
+                            // echo (" pass->" . $conLog . " <br>");
+                            // echo ("Datos recibidos! nwn");
+
                             // SELECT `mail` FROM usuarios WHERE `mail` = 'algo';
                             
                             $sqlMail="SELECT `mail` FROM usuarios WHERE `mail` = '".$mailLog."'";
                             $resultadoMail = $conexion->query($sqlMail);
-                            $sqlUser="SELECT `nombreUsuario` FROM usuarios WHERE `mail` = '".$nomLog."'";
+                            $sqlUser="SELECT `nombreUsuario` FROM usuarios WHERE `nombreUsuario` = '".$nomLog."'";
                             $resultadoUser = $conexion->query($sqlUser);
                             $rowsMail = $resultadoMail->fetch();
                             $rowsUser = $resultadoUser->fetch();
-                            if ( ! $rowsMail) {
+                            if ( ! $rowsMail and  ! $rowsUser) {
                                 echo("El correo no existe");
-                            }
-                            if ( ! $rowsUser) {
                                 echo("El user no existe");
+                                $añadeUser= insertar($nomLog,$conLog,$mailLog);
+                                $sql= $conexion->query($añadeUser);
+                            }
+                                
+                            
+                            else{
+                            
                             }
                             
 
