@@ -5,8 +5,16 @@ imagenes */
     margin-left: 0;
     width: 50%;
 }
-
-
+.bienomal *{
+    margin-left: 0;
+    width: 50%;
+}
+.ecsitosi {
+    opacity: 100%;
+}
+.ecsitono {
+    opacity: 0%;
+}
 /* botones */
 /*------------------------------------------- */
 .dale{ background-color: greenyellow;
