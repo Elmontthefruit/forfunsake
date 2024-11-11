@@ -49,7 +49,7 @@
                                 <p><i class="bi bi-send"></i> <a href="menuPrincipal.html">LOGIN</a></p>
                             </a>
                             <a href="" class="linksIndex mb-3">
-                                <p><i class="bi bi-star-fill"></i> <a href="registro.html">NUEVA CUENTA</a></p>
+                                <p><i class="bi bi-star-fill"></i> <a href="registro.php">NUEVA CUENTA</a></p>
                             </a>
                             <a href="" class="linksIndex ">
                                 <p><i class="bi bi-x-octagon-fill"></i> OLVIDÉ MIS DATOS </p>
