@@ -18,7 +18,9 @@ function cambiarModal(idseccion){
         
     } else if(idseccion==2) {
         
-    } else if(idseccion==3){}
+    } else if(idseccion==3){
+        
+    }
     else if(idseccion==4){}
     else{
 

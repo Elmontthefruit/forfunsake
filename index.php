@@ -82,7 +82,8 @@
                 if ($resultadoLogin->fetch()==true){
                     echo("usuario y pass correctas<br>");
                     echo("Procediendo a redirigir<br>");
-                    header("Location: menuPrincipal.html", true, 307); exit; 
+                    setcookie( "nUsuario",$nomLog);
+                    header("Location: menuPrincipal.php", true, 307); exit; 
                 }
             
 
