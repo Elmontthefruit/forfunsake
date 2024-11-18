@@ -16,12 +16,18 @@
         $usuActual=$_COOKIE['nUsuario'];
         $imgUser="vacío";
         $mailUser="Vacío";
+        $puntuacion00="Vacío";
+        $puntuacion01="Vacío";
+        $puntuacion02="Vacío";
         $sqlLogeo="SELECT * FROM `usuarios` WHERE `nombreUsuario`='osmel'";
 
         $resultadoLogin = $conexion->query($sqlLogeo);
         while( $fila = $resultadoLogin->fetch() ) {
             $imgUser= $fila['imagenUsuario'];
             $mailUser=$fila['mail'];
+            $puntuacion00=$fila['puntuacion00'];
+            $puntuacion01=$fila['puntuacion01'];
+            $puntuacion02=$fila['puntuacion02'];
             
         }
 

@@ -24,6 +24,21 @@ echo'<br>';
 echo $img;
 echo $mail;
 
+
+
+$sqlLogeo="SELECT * FROM `usuarios` WHERE `nombreUsuario`='osmel'";
+$resultadoLogin = $conexion->query($sqlLogeo);
+while( $fila = $resultadoLogin->fetch() ) {
+    $img= $fila['imagenUsuario'];
+    $mail=$fila['mail'];
+    echo $img;
+    echo $mail;
+    $GLOBALS['imgUser']=$fila['imagenUsuario'];
+    $GLOBALS['mailUser']==$fila['mail'];
+}
+
+
+
 ?>
 
 </head>
