@@ -83,7 +83,7 @@ echo('<center><b>debug</b><br>');
 
                 <a href="JavaScript:cambiarModal(1)"> <div class="opciones opcion1Lat degradadoOpcionesLat">Niveles</div></a>
                 <a href="JavaScript: modaldelusuario(varJS1,varJS2,varJS3,varJSp0, varJSp1, varJSp2)">  <div class="opciones opcion2Lat degradadoOpcionesLat">Jugador</div></a>
-                <a href="JavaScript:cambiarModal(3) cambiarModalEspecificoInfo(varJSp0, varJSp1, varJSp2)">  <div class="opciones opcion3Lat degradadoOpcionesLat">Records</div></a>
+                <!-- <a href="JavaScript:cambiarModal(3) cambiarModalEspecificoInfo(varJSp0, varJSp1, varJSp2)">  <div class="opciones opcion3Lat degradadoOpcionesLat">Records</div></a> -->
                 <a href="index.php"><div class="opciones opcion4Lat degradadoOpcionesLat">Salir</div></a>
                 <a href="JavaScript:cambiarModal(4)">   <div class="opciones opcion5Lat degradadoOpcionesLat">Acerca de...</div></a>
                 </div>
