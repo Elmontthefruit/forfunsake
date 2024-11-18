@@ -44,7 +44,7 @@ echo('<center><b>debug</b><br>');
         let varJSp0='.$puntuacion00.';
         let varJSp1='.$puntuacion01.';
         let varJSp2='.$puntuacion02.';
-        window.alert(varJS1+varJS2+varJS3+varJSp0+varJSp1+varJSp2);
+        // window.alert(varJS1+varJS2+varJS3+varJSp0+varJSp1+varJSp2);
         </script>');
     ?>
 
@@ -82,8 +82,8 @@ echo('<center><b>debug</b><br>');
             <div class="col-2   text-center p-0 ">
 
                 <a href="JavaScript:cambiarModal(1)"> <div class="opciones opcion1Lat degradadoOpcionesLat">Niveles</div></a>
-                <a href="JavaScript: modaldelusuario(varJS1,varJS2,varJS3)">  <div class="opciones opcion2Lat degradadoOpcionesLat">Jugador</div></a>
-                <a href="JavaScript:cambiarModal(3)">  <div class="opciones opcion3Lat degradadoOpcionesLat">Records</div></a>
+                <a href="JavaScript: modaldelusuario(varJS1,varJS2,varJS3,varJSp0, varJSp1, varJSp2)">  <div class="opciones opcion2Lat degradadoOpcionesLat">Jugador</div></a>
+                <a href="JavaScript:cambiarModal(3) cambiarModalEspecificoInfo(varJSp0, varJSp1, varJSp2)">  <div class="opciones opcion3Lat degradadoOpcionesLat">Records</div></a>
                 <a href="index.php"><div class="opciones opcion4Lat degradadoOpcionesLat">Salir</div></a>
                 <a href="JavaScript:cambiarModal(4)">   <div class="opciones opcion5Lat degradadoOpcionesLat">Acerca de...</div></a>
                 </div>
@@ -102,8 +102,8 @@ echo('<center><b>debug</b><br>');
     <div class="container">
         <div class="row horizontalAbajo ">
             <div class="col-1 col degradado-azul1 roundEsquina4">
-            
-                <img src="img/bomato.gif" class="img-fluid" >
+            <div class="pfp">                <img src="img/bomato.gif" class="img-fluid" ></div>
+
             </div>
             <div class="col degradado-azul1  roundEsquina3 text-center pt-4">
                For Fun Sake!
