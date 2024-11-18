@@ -57,7 +57,7 @@ echo('<center><b>debug</b><br>');
             </div>
 <!-- Modal de titulo -->
             <div class="col degradado-azul2 text-center rounded-1  " id=" tituloCancion">
-                Get psyched!
+                <b>Get psyched!</b>
             </div>
             
         </div>
