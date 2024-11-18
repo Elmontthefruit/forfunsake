@@ -19,7 +19,7 @@
         $puntuacion00="Vacío";
         $puntuacion01="Vacío";
         $puntuacion02="Vacío";
-        $sqlLogeo="SELECT * FROM `usuarios` WHERE `nombreUsuario`='osmel'";
+        $sqlLogeo="SELECT * FROM `usuarios` WHERE `nombreUsuario`='".$usuActual."'";
 
         $resultadoLogin = $conexion->query($sqlLogeo);
         while( $fila = $resultadoLogin->fetch() ) {
@@ -41,7 +41,10 @@ echo('<center><b>debug</b><br>');
         let varJS1="'.$usuActual.'";
         let varJS2="'.$mailUser.'";
         let varJS3='.$imgUser.';
-        window.alert(varJS1+varJS2+varJS3);
+        let varJSp0='.$puntuacion00.';
+        let varJSp1='.$puntuacion01.';
+        let varJSp2='.$puntuacion02.';
+        window.alert(varJS1+varJS2+varJS3+varJSp0+varJSp1+varJSp2);
         </script>');
     ?>
 
