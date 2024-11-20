@@ -48,7 +48,7 @@ function cambiarModalEspecificoInfo(p1,p2,p3){
 
 function cambiarModalEspecifico(idsubsecc){
     
-    let texto1='<center><span><b>A escala</b><br><img src="img/0.gif" alt="" srcset=""><br><p>Una canción para empezar. Prácticamente una sola escala. Cuenta con muchos fans online y una version "kaizo"</p><button class="opciones btn btn-danger"><a href="a_escala.html"> FFS! >:)</a></button></span></center>'
+    let texto1='<center><span><b>A escala</b><br><img src="img/0.gif" alt="" srcset=""><br><p>Una canción para empezar. Prácticamente una sola escala. Cuenta con muchos fans online y una version "kaizo"</p><button class="opciones btn btn-danger"><a href="a_escala.php"> FFS! >:)</a></button></span></center>'
     let texto2='<center><span><b> Meet and Tweet</b><br><img src="img/0.gif" alt="" srcset=""><br><p>Va de un pollo salchicho gordo bachicho que hace pio pio...técnicamente es un canario así qu-OH DIOS ME HAN HECHO UNA CANCIÓN *W*</p><button class="opciones btn btn-danger"><a href="404.html"> FFS! >:)</a></button></span></center>'
     
     
