@@ -102,7 +102,10 @@ echo('<center><b>debug</b><br>');
     <div class="container">
         <div class="row horizontalAbajo ">
             <div class="col-1 col degradado-azul1 roundEsquina4">
-            <div class="pfp">                <img src="img/bomato.gif" class="img-fluid" ></div>
+            <?php 
+            echo ('<div class="pfp"><img src="img/'.$imgUser.'.gif" class="img-fluid" ></div>');
+            ?>
+
 
             </div>
             <div class="col degradado-azul1  roundEsquina3 text-center pt-4">
