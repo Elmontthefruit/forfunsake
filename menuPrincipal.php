@@ -14,11 +14,14 @@
     <?php
     include("conexionBD.php");
         $usuActual=$_COOKIE['nUsuario'];
+
         $imgUser="vacío";
         $mailUser="Vacío";
         $puntuacion00="Vacío";
         $puntuacion01="Vacío";
         $puntuacion02="Vacío";
+
+   
         $sqlLogeo="SELECT * FROM `usuarios` WHERE `nombreUsuario`='".$usuActual."'";
 
         $resultadoLogin = $conexion->query($sqlLogeo);
@@ -30,6 +33,16 @@
             $puntuacion02=$fila['puntuacion02'];
             
         }
+
+        if (!empty($_REQUEST["imgPerfilHtml"])){
+            $imgDePrefilACT=$_REQUEST["imgPerfilHtml"];
+            $imgUser= $imgDePrefilACT;
+            $sqlimagen= "UPDATE `usuarios` SET `imagenUsuario`='".$imgDePrefilACT."' WHERE `nombreUsuario`= '".$usuActual."'";
+            $resultadoLogin = $conexion->query($sqlLogeo);
+            echo($imgDePrefilACT.'AAAAAAAAAAAA');
+        } 
+
+
 
 
 echo('<center><b>debug</b><br>');

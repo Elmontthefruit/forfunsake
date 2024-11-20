@@ -25,9 +25,9 @@
             return false;
         };
     }
-    function insertar($usuario,$pass,$mail){
+    function insertar($usuario,$pass,$mail,$img){
         // INSERT INTO `usuarios`(`nombreUsuario`, `passUsuario`, `imagenUsuario`, `mail`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
-        $insertarS="INSERT INTO `usuarios`(`nombreUsuario`, `passUsuario`, `imagenUsuario`, `mail`) VALUES ('".$usuario."','".$pass."','0','".$mail."')";
+        $insertarS="INSERT INTO `usuarios`(`nombreUsuario`, `passUsuario`, `imagenUsuario`, `mail`) VALUES ('".$usuario."','".$pass."','$img','".$mail."')";
         return  $insertarS;
         //Ahora hay que hacer comprobaciones en la base de datos. Dios me asista
     }
@@ -62,6 +62,13 @@
                                     <input type="text" class="form-control" name="contraseña" placeholder=" CONTRASEÑA" aria-label="passwd"
                                         aria-describedby="basic-addon1">
                                 </div>
+                                <div class="input-group mb-3 m-auto fs-3">
+                                <input type="radio" checked="checked" id="pfp" name="pfp" value=0> <img class="imgPerfilUsuario" src="img/0.gif" alt="">
+                                <input type="radio" id="pfp" name="pfp" value=1> <img class="imgPerfilUsuario" src="img/1.gif" alt="">
+                                <input type="radio" id="pfp" name="pfp" value=2> <img class="imgPerfilUsuario" src="img/2.gif" alt=""><br>
+
+                                
+                                </div>
                                 <p class="text-center"><i class="bi bi-star-fill "></i> <input type="submit" value="Crear la cuenta"><i class="bi bi-star-fill "></i></p>
                             </form>
                         </div>
@@ -78,6 +85,7 @@
                             $nomLog = $_REQUEST["usuario"];
                             $conLog = $_REQUEST["contraseña"];
                             $mailLog = $_REQUEST["mail"];
+                            $imgPerf = $_REQUEST["pfp"];
                             //debúuu
                             // echo (" Mail->" . $mailLog . " <br>");
                             // echo (" usuario->" . $nomLog . " <br>");
@@ -95,7 +103,8 @@
                             if ( ! $rowsMail and  ! $rowsUser) {
                                 echo("El correo no existe");
                                 echo("El user no existe");
-                                $añadeUser= insertar($nomLog,$conLog,$mailLog);
+                                echo("la imagen es la ". $imgPerf);
+                                $añadeUser= insertar($nomLog,$conLog,$mailLog,$imgPerf);
                                 $sql= $conexion->query($añadeUser);
                             }
                                 
