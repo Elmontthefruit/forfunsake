@@ -10,30 +10,8 @@
     <link rel="stylesheet" href="niveles/css/a_escala.css">
     <script src="niveles/scripts/a_escala.js"></script>
 
-<?php
- $sqlLogeo="SELECT * FROM `usuarios` WHERE `nombreUsuario`='".$usuActual."'";
-
- $resultadoLogin = $conexion->query($sqlLogeo);
- while( $fila = $resultadoLogin->fetch() ) {
-    
- }
-
-
-?>
-
-
-
-
-
-
-
-
 </head>
 <body>
-
-
-
-
     
 
 <section id="infoCancion ">
@@ -82,7 +60,10 @@
 
 <p id="demoAlerta"></p>
 </section>
+<form action="about:blank" method="get"></form>
+<?php 
 
+?>
 
 <script src="css/bootstrap.bundle.min.js"></script>
 </body>

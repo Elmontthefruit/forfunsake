@@ -70,6 +70,9 @@
 
 <?php
     
+
+
+    
         if (!empty($_REQUEST["usuario"]) and (!empty($_REQUEST["contraseña"]))) {
             $nomLog=$_REQUEST["usuario"];
             $conLog=$_REQUEST["contraseña"];

@@ -21,8 +21,23 @@
         $puntuacion01="Vacío";
         $puntuacion02="Vacío";
 
-   
         $sqlLogeo="SELECT * FROM `usuarios` WHERE `nombreUsuario`='".$usuActual."'";
+        if (!empty($_REQUEST["puntuacion"]) and (!empty($_REQUEST["nivel"]))) {
+          
+            $puntu=$_REQUEST["puntuacion"];
+            $nive=$_REQUEST["nivel"];}
+
+            $resultadoLogin = $conexion->query($sqlLogeo);
+            while( $fila = $resultadoLogin->fetch() ) {
+
+            }
+
+
+
+
+
+   
+
 
         $resultadoLogin = $conexion->query($sqlLogeo);
         while( $fila = $resultadoLogin->fetch() ) {
