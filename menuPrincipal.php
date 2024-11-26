@@ -25,16 +25,21 @@
 
         $sqlLogeo="SELECT * FROM `usuarios` WHERE `nombreUsuario`='".$usuActual."'";
         $resultadoLogin = $conexion->query($sqlLogeo);
-        if (!empty($_REQUEST["puntuacion"]) and (!empty($_REQUEST["nivel"]))) {
-            
+       
+        if (!empty($_REQUEST["maxScore"]) and (!empty($_REQUEST["nivel"]))) {
             $maxScore=$_REQUEST["maxScore"];
             $nivel=$_REQUEST["nivel"];
+            $sqlAct="UPDATE `usuarios` SET `$nivel`='$maxScore' WHERE `nombreUsuario`='$usuActual'";
+           
 
             while( $fila = $resultadoLogin->fetch() ) {
-                if ($puntuacion00=$fila['puntuacion00']<$maxScore)
+                if ($fila['puntuacion00']<$maxScore){
+                    // echo('<b>debug</b><br> el nivel es ->'.$nivel.'<br>la puntuacion es->'.$maxScore);
+                    // echo('<br> Fila->'.$fila['puntuacion00']);
+                     $ResultadoAct = $conexion->query($sqlAct);
             
-             $sqlAct="UPDATE `usuarios` SET `$nivel`='$maxScore' WHERE `nombreUsuario`='$usuActual";
-             $ResultadoAct = $conexion->query($sqlAct);}
+  }
+            }
         }
 
            
@@ -68,10 +73,10 @@
 
 
 
-echo('<center><b>debug</b><br>');
-                echo("El usuario actual es...".$usuActual).'<br>';
-                echo("El mail actual es...".$mailUser.'<br>');
-                echo("La imagen actual es la numero...".$imgUser."</center>");
+// echo('<center><b>debug</b><br>');
+//                 echo("El usuario actual es...".$usuActual).'<br>';
+//                 echo("El mail actual es...".$mailUser.'<br>');
+//                 echo("La imagen actual es la numero...".$imgUser."</center>");
 
         echo('<script>
         let varJS1="'.$usuActual.'";
@@ -153,8 +158,8 @@ echo('<center><b>debug</b><br>');
 
 
 
-
-<a href="fase_pruebas.html">a las pruebas</a>
+<!-- 
+<a href="fase_pruebas.html">a las pruebas</a> -->
 
 
 
