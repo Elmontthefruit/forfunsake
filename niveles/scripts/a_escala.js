@@ -18,11 +18,13 @@ function hastaHuevor() {
 let puntuacionfinal=puntuacion/indexT
 puntuacionfinal.toFixed(2);
 if (puntuacionfinal<=0){ puntuacionfinal="0%; Pero si lo has hecho fatal! "} else {puntuacionfinal=(puntuacionfinal*100).toFixed(2)+"%"}
+
+
     let text = "Fin del nivel! Tu puntiación es del..."+puntuacionfinal+" Pulsa 'aceptar' para volver al menu o 'cancelar' para reintentar.";
     if (confirm(text) == true) {
-        window.location.href = 'menuPrincipal.html';
+        window.location.href = 'menuPrincipal.php?maxScore='+puntuacionfinal+'&nivel=puntuacion00';
     } else {
-        window.location.href = 'fase_pruebas.html';;
+        window.location.href = 'fase_pruebas.php';;
     }
     document.getElementById("demoAlerta").innerHTML = text;
 }

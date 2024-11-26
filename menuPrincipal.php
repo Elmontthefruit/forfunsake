@@ -14,6 +14,8 @@
     <?php
     include("conexionBD.php");
         $usuActual=$_COOKIE['nUsuario'];
+        $maxScore="vacío";
+        $nivel="vacio";
 
         $imgUser="vacío";
         $mailUser="Vacío";
@@ -22,15 +24,21 @@
         $puntuacion02="Vacío";
 
         $sqlLogeo="SELECT * FROM `usuarios` WHERE `nombreUsuario`='".$usuActual."'";
+        $resultadoLogin = $conexion->query($sqlLogeo);
         if (!empty($_REQUEST["puntuacion"]) and (!empty($_REQUEST["nivel"]))) {
-          
-            $puntu=$_REQUEST["puntuacion"];
-            $nive=$_REQUEST["nivel"];}
+            
+            $maxScore=$_REQUEST["maxScore"];
+            $nivel=$_REQUEST["nivel"];
 
-            $resultadoLogin = $conexion->query($sqlLogeo);
             while( $fila = $resultadoLogin->fetch() ) {
+                if ($puntuacion00=$fila['puntuacion00']<$maxScore)
+            
+             $sqlAct="UPDATE `usuarios` SET `$nivel`='$maxScore' WHERE `nombreUsuario`='$usuActual";
+             $ResultadoAct = $conexion->query($sqlAct);}
+        }
 
-            }
+           
+
 
 
 
