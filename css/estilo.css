@@ -114,7 +114,9 @@ width: 95px;
 .roundEsquina4{
     border-radius: 0px 0px 0px 15px;
 }
-
+.roundEsquina5{
+    border-radius: 15px 15px 0px 0px;
+}
 
 /* Scrolls */
 #containerScroll{
@@ -155,3 +157,12 @@ font-weight: bolder;
 .dale:hover{ background-color: greenyellow;}
 
 .noDale{ background-color:red ;}
+
+#infoModalEspecifico{
+    padding:5px,5px;
+    border-radius: 5px;
+    background-image: url("..\img\fondito_00.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid white;
+}

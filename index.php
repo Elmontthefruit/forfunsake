@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <section class="index_hiro w-100">
+    <section class="index_hiro w-100 ">
 
         <div class="container-fluid ">
             <div class="row ">

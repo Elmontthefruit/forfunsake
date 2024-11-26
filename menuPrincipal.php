@@ -96,8 +96,8 @@
 <body>
     
 
-<section class="cabezaMenu ">
-    <div class="container degradado-azul2  roundEsquina1  ">
+<section class="cabezaMenu pt-5 ">
+    <div class="container degradado-azul2  roundEsquina5   ">
         <div class="row pt-3 pb-2 px-3 ">
             <div class="col-8 ">
                 <div id="containerScroll">
@@ -132,7 +132,7 @@
             <div class="col-6  bg-success-subtle "id="infoModal" >
 
         </div>
-            <div class="col  bg-success" id="infoModalEspecifico">Tercera columna con info
+            <div class="col  "  id="infoModalEspecifico"> 
                 <img src="img/mato.gif" class="w-100" alt="" srcset="">
             </div>
         </div>
