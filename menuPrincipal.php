@@ -101,7 +101,8 @@
         <div class="row pt-3 pb-2 px-3 ">
             <div class="col-8 ">
                 <div id="containerScroll">
-                    <div id="textoScroll">Ultima hora, La RAE acepta el uso de la palabra cocretamente, cocretamente hablando</div>
+                    <div id="textoScroll">  
+                    Ultima hora, La RAE acepta el uso de la palabra cocretamente, cocretamente hablando</div>
                 </div>
                     
             </div>
@@ -150,7 +151,7 @@
 
             </div>
             <div class="col degradado-azul1  roundEsquina3 text-center pt-4">
-               For Fun Sake!
+               <img class="opciones w-25" src="img/FFSlogo.png" alt="">
             </div>
         </div>
     </div>
