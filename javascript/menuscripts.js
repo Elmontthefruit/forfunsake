@@ -26,7 +26,7 @@ function cambiarModal(idseccion){
     } 
       
     else if(idseccion==4){
-        document.getElementById("infoModal").innerHTML='<center><b>FOR Fu<del>ck</del>N SAKE!</b><br>FFS es un juego programado por Osmel (tambien conocido como Elmont)<br>Es un projecto de fin de módulo para DAW (Desarrollo de Aplicaciones Web).<br>Las imágenes son en su mayoría creadas por el y su amigo Nick Von Leuveen (¡Es de paises bajos!)<br></i><br>Junkye pertenece a Elmont (osea, a mi). No se recomienda el consmo de nada que Junkye pueda ofrecerte salvo que quieras darte el viaje de tu vida<br><img class="w-25" src="img/junkitochulito.png" alt=""></center>';
+        document.getElementById("infoModal").innerHTML='<center><b>FOR Fu<del>ck</del>N SAKE!</b><br>FFS es un juego programado por Osmel (tambien conocido como Elmont)<br>Es un projecto de fin de módulo para DAW .<br>Las imágenes son en su mayoría creadas por el y su amigo Nick Von Leuveen <i>Bedankt voor mij een handje te helpen. Ik heb deze schattige Elmont gif genomen die jij hebt gebruikt als ruimtevuller.Ook een bedankje voor Lupi voor dit te vertalen.</i><br>Junkye pertenece a Elmont (osea, a mi). No se recomienda el consmo de nada que Junkye pueda ofrecerte salvo que quieras darte el viaje de tu vida<br><img class="w-25" src="img/junkitochulito.png" alt=""></center>';
         
     document.getElementById("infoModalEspecifico").innerHTML='<img src="img/mato.gif" class="w-100">';
     }
