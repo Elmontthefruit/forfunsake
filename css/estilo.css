@@ -1,13 +1,34 @@
 .index_hiro{
     width: 100%;
     height: 100vh;
-    background-image: url("/img/index_Holly.png");
+    background-size: cover;
+    background-image: url("/img/bg_index02.png");
+    background-repeat: no-repeat;
     background-position: center;
-    position: relative;
+    /* position: relative; */
+
+
+}
+.cajita_login{
+    background-image: url("/img/fondito_00.jpg");
+    border: 5px solid black;
 
 
 }
 
+
+
+.containercito {filter: ;}
+.reg_registro{
+    background-size: cover;
+    background-image: url("/img/bg_registro.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* position: relative; */
+
+
+}
+/* ------------------------------------- */
 .imagenFFS img{
 width: 100%;
 }

@@ -39,9 +39,9 @@
 
 <body>
     <section>
-        <nav class="reg_registro bg-primary-subtle vh-100 ">
+        <nav class="reg_registro  vh-100 ">
 
-            <div class="container bg-danger vh-100">
+            <div class="container  vh-100">
                 <div class="row ">
                     <div class="inputs col-4 offset-1">
                         <div class="formulario ">
@@ -62,6 +62,7 @@
                                     <input type="text" class="form-control" name="contraseña" placeholder=" CONTRASEÑA" aria-label="passwd"
                                         aria-describedby="basic-addon1">
                                 </div>
+                                <center><b>Imagen de perfil</b><br></center>
                                 <div class="input-group mb-3 m-auto fs-3">
                                 <input type="radio" checked="checked" id="pfp" name="pfp" value=0> <img class="imgPerfilUsuario" src="img/0.gif" alt="">
                                 <input type="radio" id="pfp" name="pfp" value=1> <img class="imgPerfilUsuario" src="img/1.gif" alt="">
@@ -73,10 +74,11 @@
                             </form>
                         </div>
 
-                        <p class="text-center fst-italic"><i class="bi bi-house"></i> <a href="index.html">Volver al inicio </a><i class="bi bi-house"></i></p>
+                        <p class="text-center fst-italic"><i class="bi bi-house"></i> <a href="index.php">Volver al inicio </a><i class="bi bi-house"></i></p>
                     </div>
-                    <div class="col-4 ">
-                        <img src="img/bumbumbum.png" alt="" srcset="">
+                    <div class="col-4 pt-5 ">
+                        <img src="img/bumbumbum2.png" alt="" srcset=""> 
+
                         <?php
 
 
@@ -101,9 +103,10 @@
                             $rowsMail = $resultadoMail->fetch();
                             $rowsUser = $resultadoUser->fetch();
                             if ( ! $rowsMail and  ! $rowsUser) {
-                                echo("El correo no existe");
-                                echo("El user no existe");
-                                echo("la imagen es la ". $imgPerf);
+                                echo("<center><b> El usuario ha sido creado. Ya puedes volver e iniciar sesión</b></center>");
+                                // echo("El correo no existe");
+                                // echo("El user no existe");
+                                // echo("la imagen es la ". $imgPerf);
                                 $añadeUser= insertar($nomLog,$conLog,$mailLog,$imgPerf);
                                 $sql= $conexion->query($añadeUser);
                             }

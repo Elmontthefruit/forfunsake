@@ -2,8 +2,8 @@
 
 let contenidoMod=document.getElementById("infoModal");
 
-let cancion1=' <div class="itemcancion d-flex m-auto"><img src="img/bomato.gif" class="imgitemcancion pe-5 "><div class="infoitemscancion pt-2"><span class="titulocancion">¡A escala! <br></span><span class="tituloAlbum ps-1">Rythm Paradise<br></span><span class="dificultadcancion ps-2" ><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span></div></div>';
-let cancion2=' <div class="itemcancion d-flex m-auto"><img src="img/bomato.gif" class="imgitemcancion pe-5 "><div class="infoitemscancion pt-2"><span class="titulocancion">Tweet and meet <br></span><span class="tituloAlbum ps-1">Bits & Bops<br></span><span class="dificultadcancion ps-2" ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span></div></div>';
+let cancion1=' <div class="itemcancion d-flex m-auto"><img src="img/aescalaapng.png" class="imgitemcancion pe-5 "><div class="infoitemscancion pt-2"><span class="titulocancion">¡A escala! <br></span><span class="tituloAlbum ps-1">Rythm Paradise<br></span><span class="dificultadcancion ps-2" ><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span></div></div>';
+let cancion2=' <div class="itemcancion d-flex m-auto"><img src="img/meettweetapng.png" class="imgitemcancion pe-5 "><div class="infoitemscancion pt-2"><span class="titulocancion">Tweet and meet <br></span><span class="tituloAlbum ps-1">Bits & Bops<br></span><span class="dificultadcancion ps-2" ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span></div></div>';
 function modaldelusuario(nUsuarioJs,mailUsuarioJs,imagenUsuarioJS,varJp0, varJp1, varJp2){
     
     let textomodal2='<div><center><img class="imgPerfilUsuario" src="img/'+imagenUsuarioJS+'.gif" alt=""><br><b>nombre de usuario->'+nUsuarioJs+'</b><br>Mail del usuario->'+mailUsuarioJs+'<br>cambiar imagen </center></div>'
@@ -43,8 +43,8 @@ function cambiarModalEspecificoInfo(p1,p2,p3){
 
 function cambiarModalEspecifico(idsubsecc){
     
-    let texto1='<center><span><b>A escala</b><br><img src="img/0.gif" alt="" srcset=""><br><p>Una canción para empezar. Prácticamente una sola escala. Cuenta con muchos fans online y una version "kaizo"</p><button class="opciones btn btn-danger"><a href="a_escala.html"> FFS! >:)</a></button></span></center>'
-    let texto2='<center><span><b> Meet and Tweet</b><br><img src="img/0.gif" alt="" srcset=""><br><p>Va de un pollo salchicho gordo bachicho que hace pio pio...técnicamente es un canario así qu-OH DIOS ME HAN HECHO UNA CANCIÓN *W*</p><button class="opciones btn btn-danger"><a href="404.html"> FFS! >:)</a></button></span></center>'
+    let texto1='<center><span><b>A escala</b><br><img class="w-25" src="img/prewesc.png" alt="" srcset=""><br><p>Una canción para empezar. Prácticamente una sola escala. Cuenta con muchos fans online y una version "kaizo"</p><button class="opciones btn btn-danger"><a href="a_escala.html"> FFS! >:)</a></button></span></center>'
+    let texto2='<center><span><b> Meet and Tweet</b><br><img class="w-25" src="img/prewtweet.png" alt="" srcset=""><br><p>Va de un pollo salchicho gordo bachicho que hace pio pio...técnicamente es un canario así qu-OH DIOS ME HAN HECHO UNA CANCIÓN *W*</p><button class=" opciones btn btn-danger"><a href="404.html"> FFS! >:)</a></button></span></center>'
     
     
     

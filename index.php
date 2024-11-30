@@ -26,7 +26,7 @@
             <div class="row ">
                 <div class=" hiroizq offset-1 col-lg-6">
 
-                    <img class=" pt-5" src="img/ffs2.png">
+                    <img class="opciones pt-5" src="img/ffs2_index.png">
                 </div>
 
                 <div class=" offset-1 col-lg-3 ">
@@ -38,17 +38,17 @@
 
                             <div class="input-group mb-3 w-50 m-auto">
                                 <i class="bi bi-person-badge-fill fs-3"></i>
-                                <input type="text" class="form-control" name="usuario" placeholder=" USUARIO" aria-label="usrnm"
+                                <input type="text" class="form-control" name="usuario" placeholder="USUARIO" aria-label="usrnm"
                                     aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3 w-50 m-auto fs-3">
                                 <i class="bi bi-key-fill"></i>
-                                <input type="text" class="form-control" name="contraseña" placeholder=" CONTRASEÑA" aria-label="passwd"
+                                <input type="text" class="form-control" name="contraseña" placeholder="PASS" aria-label="passwd"
                                     aria-describedby="basic-addon1">
                             </div>
                             <div class="subcajitaIndex ">
                                 <a href="" class="linksIndex mb-3">
-                                    <p><i class="bi bi-send"></i> <input class="" type="submit" value="Iniciar sesión"></p>
+                                    <p><i class=" bi bi-send"></i> <input class="" type="submit" value="Iniciar sesión"></p>
                                 </a>
                         </form>
                         <a href="" class="linksIndex mb-3">
