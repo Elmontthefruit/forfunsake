@@ -42,7 +42,7 @@ function playAudio() {
     audioNivel.play();
 
     document.getElementById("btnStart").remove();
-
+    document.getElementById("coljuego").innerHTML='<button  class="btn" id="bton-1"  onclick="pulsaBoton()">clickame!</button>';
     document.getElementById("animacionJuego").innerHTML='<img src="img/helltaker-static.gif" class="fever">';
 
 
