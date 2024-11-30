@@ -86,7 +86,7 @@
 
 </head>
 
-<body>
+<body class="reg_registro">
 
 
     <section class="cabezaMenu pt-5 ">
