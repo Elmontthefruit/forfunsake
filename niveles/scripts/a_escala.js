@@ -43,7 +43,7 @@ function playAudio() {
 
     document.getElementById("btnStart").remove();
     document.getElementById("coljuego").innerHTML='<button  class="btn" id="bton-1"  onclick="pulsaBoton()">clickame!</button><p id="indicadorBM"> </p>';
-    document.getElementById("animacionJuego").innerHTML='<img src="img/helltaker-static.gif" class="fever">';
+    document.getElementById("animacionJuego").innerHTML='<img src="img/apngjunkitoDunkitoplay.png" class="fever">';
 
 
 
@@ -64,7 +64,7 @@ setInterval( function(){
         alert(hastaHuevor());
 
     }else{
-            document.getElementById("animacionJuego").innerHTML='<img src="img/helltaker-static.gif" class="fever">'
+            document.getElementById("animacionJuego").innerHTML='<img src="img/apngjunkitoDunkitoplay.png" class="fever">'
         correcto=false;
         $("#bton-1").removeClass("dale");
     
