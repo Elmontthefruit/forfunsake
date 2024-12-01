@@ -42,7 +42,7 @@ function playAudio() {
     audioNivel.play();
 
     document.getElementById("btnStart").remove();
-    document.getElementById("coljuego").innerHTML='<button  class="btn" id="bton-1"  onclick="pulsaBoton()">clickame!</button>';
+    document.getElementById("coljuego").innerHTML='<button  class="btn" id="bton-1"  onclick="pulsaBoton()">clickame!</button><p id="indicadorBM"> </p>';
     document.getElementById("animacionJuego").innerHTML='<img src="img/helltaker-static.gif" class="fever">';
 
 
@@ -88,11 +88,18 @@ function pulsaBoton() {
         puntuacion = puntuacion + 1;
         correcto= false;
         $("#bton-1").removeClass("dale");
-        document.getElementById("animacionJuego").innerHTML='<img src="img/helltaker-success.gif" class="fever">';
+        document.getElementById("indicadorBM").innerHTML='<img src="img/correctoapng.png" class="fever">';
+        setTimeout(() => {
+            document.getElementById("indicadorBM").innerHTML="";
+          }, "480");
+          
 
     } else {
             puntuacion=puntuacion-1
-            document.getElementById("animacionJuego").innerHTML='<img src="img/error.png" class="fever">'
+            document.getElementById("indicadorBM").innerHTML='<img src="img/incorrectoapng.png" class="fever">'
+            setTimeout(() => {
+                document.getElementById("indicadorBM").innerHTML="";
+              }, "480");
         }
         document.getElementById('puntitos').innerText = puntuacion;  
 
