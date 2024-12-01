@@ -11,7 +11,6 @@
 1. [Introducción del proyecto](#introducción)
     - [Objetivos](#objetivos)
     - [Justificación del proyecto](#justificación-del-proyecto)
-        - [Análisis de mercado](#análisis-de-mercado)
         - [Vinculación de contenidos vistos en el ciclo formativo](#vinculación-de-contenidos-vistos-en-el-ciclo-formativo)
 2. [Recursos Utilizados](#2--recursos-utilizados)
     - [Entornos de desarrollo](#entornos-de-desarrollo)
@@ -21,14 +20,13 @@
 4. [Diseño del proyecto](#4--diseño-del-proyecto)
     - [Diseño de la base de datos](#diseño-de-la-base-de-datos)
     - [Carga de datos inicial](#carga-de-datos-inicial)
-    - [Roles de la aplicación](#roles-de-la-aplicación)
     - [Usuarios creados para pruebas](#usuarios-creados-para-pruebas)
 5. [Lógica/codificación del proyecto](#5--lógicacodificación-del-proyecto)
     - [Principales procesos](#principales-procesos)
     - [Aspectos relevantes de la implementación](#aspectos-relevantes-de-la-implementación)
-6. [Despliegue Web del proyecto](#6--despliegue-web-del-proyecto)
+
 7. [Manual de usuario](#7--manual-de-usuario)
-8. [Conclusiones y aspectos a mejorar](#8--conclusiones-y-aspectos-a-mejorar)
+8. [Conclusiones](#8-conclusiones-y-posibles-mejoras)
 9. [Bibliografía](#bibliografía)
 10. [Agradecimientos](#agradecimientos)
 
@@ -123,15 +121,13 @@ Las diferentes tecnologías utilizadas a lo largo del desarrollo del proyecto ha
 
 - `Diagrama E/R`:
 
-![Diagrama E/R](Modelo%20ER.png)
+![Diagrama E/R](/documentacion/e-r.png)
 
-- `Modelo Relacional`:
 
-![Modelo Relacional](Diseño%20BD.png)
 
 ### Carga de datos inicial
 
-Los datos relacionados con los usuarios se almacenan en la base de datos, así que para inicializarlo se utiliza el archivo sql *O*)/
+Los datos relacionados con los usuarios se almacenan en la base de datos, así que para inicializarlo se utiliza el archivo sql 
 
 
 ### Diseño de la interfaz de usuario
@@ -140,7 +136,7 @@ La interfaz de usuario se divide en 2 partes a las que internamente se le refier
 
 - *XP* hace referencia a la interfaz del menú principal, basada en los colores de windows XP y el reproductor de windows Media. Los colores y formas han intentado recrearse en cierta medida (tonos azulados, degradados, esquinas redondeadas...) 
 
--*soso* hace referencia al resto de elementos más genéricos, más "sosos" en comparación a los otros elementos. En parte, algunos de estos elementos se refieren asípara aliviar la carga de elementos más pesados (como música o animaciones en niveles)
+- *Soso* hace referencia al resto de elementos más genéricos, más "sosos" en comparación a los otros elementos. En parte, algunos de estos elementos se refieren asípara aliviar la carga de elementos más pesados (como música o animaciones en niveles)
 
 
 ### Usuarios creados para pruebas
@@ -168,59 +164,49 @@ Para las pruebas se han creado varios usuarios. Realmente las operaciones con lo
 
 - **Login**: El login es sencillo. Recoge el nombre de usuario y la contraseña y pregunta  ala base de datos si esa cobinación de datos existe. En aso afirmativo, el usuario con dicha contraseña existe, así que te redirige al menú principal con esos datos
 
+- **Sistema de tempo**: El funcionamiento base de los niveles consiste en un contador de tiempo invisible al jugador. 
+Dicho contador de tiempo puede ser ajustado a conveniencia de cada fase.
+ Actualmente recibe (en la fase implementada) un array con tiempos, procesándolo cada medio segundo (500ms).
+  Cada medio segundo, se comprueba que se haya clickado o no en el botón cuando coincida el contador de tiempo. Si coincide la marca de tiempo con el array y la posición adecuada, se añade 1 punnto al contador. Si no coincide, se resta un punto.
+  La omisión de pulsación no conlleva penalización
 
-- **Sistema de carpetas**: UAUAUAUAUAAU
+- **Sistema de carpetas**: 
 ```
-2324_TFG_VeronicaFigueredo
-├───app
-│   ├───css
-│   ├───cubos
-│   ├───html
-│   ├───img
-│   ├───js
-│   ├───node_modules
-│   └───php
-├───docker
-│   ├───nginx
-│   │   ├───config
-│   │   └───snippets
-│   └───php
+ForFunSake
+├───audio
+│
+├───CSS
+│
 ├───DOCUMENTACION
-│   ├───anexos
-│   │   ├───anexo I
-│   │   │   └───capturas
-│   │   └───anexo II
-│   │       └───capturas
-│   └───images
-└───mysql
+│   ├───IMG 
+│   └───Manual
+├───img
+│
+├───javascript
+│
+├───mysql-8
+│
+├───Niveles
 ```
 
-- **app**: Contiene los archivos de la aplicación web.
-    - **css**: Contiene los archivos de estilo, tanto como el css personal, como el de Sass modificado.
-    - **cubos**: Carpeta que contiene las diferentes imágenes de las tarjetas de los cubos.
-    - **html**: Contiene los archivos html extras al `index.html`.
-    - **img**: Contiene las imagenes utilizadas en la web.
-    - **js**: Contiene los archivos javascript (.js) que darán dinamismo y funcionalidad a la web.
-    - **node_modules**: Carpeta contenedora del framework de Bootstrapt
-    - **php**: Contiene los archivos de php que harán las funciones de backend hacia la base de datos.
-- **docker**: Contiene los archivos de configuración necesarios para el despliegue de la web en un contenedor docker
-    - **nginx**: Archivos de configuración para el funcionamiento del servicio web.
-    - **php**: Archivo de creación para el servicio php.
-- **DOCUMENTACIÓN**: Contiene los archivos de la documentación del proyecto, así como las imágenes utilizadas en el mismo.
-    - **Anexos**: Donde se almacenarán los dos anexos a esta documentación.
-        - **Anexo I**: Anexo para el despliegue web del proyecto. Contendrá la carpeta **capturas** para las imágenes utilizadas en el mismo.
-        - **Anexo II**: Anexo para el manual de usuario. Contendrá la carpeta **capturas** para las imágenes utilizadas en el mismo.
-- **mysql**: Almacena el archivo fuente de la base de datos `merkarubik.sql`.
+- **aForFunSake**: Raiz del proyecto.
+    - **Audio**: Audios del proyecto. Actualmente solo incluye el tema del nivel jugable.
+    - **Css**: Archivos de CSS y bvootstrap en general.
+    - **Documentación**: La documentación del proyecto y el manual de usuario.
+    - **img**: Imágenes del proyecto.
+    - **javascript**: Scripts generales del proyecto y clases.
+    - **mysql-8**: La base de datos
+    - **Niveles**: Archivos CSS y scripts exclusivos a los niveles jugables.
 
-## 6.- Despliegue Web del proyecto
 
-## 7.- Manual de usuario
 
-En este apartado se despliega el manual de usuario de la aplicación, donde se incluyen los puntos principales del proyecto así como su uso.
+## 6.- Manual de usuario
+El manual de usuario, para hacerlo más acorde al proyecto, se presenta a continuación
+ como un archivo separado, imitando el estilo de un manual de un videojuego
 
-Link al anexo explicativo del manual de usuario: [Anexo II - Manual de usuario](anexo%20II/README.md)
+Link al manual de usuario: [ Manual de usuario](anexo%20II/README.md)
 
-## 8.- Conclusiones posibles mejoras
+## 7.-Conclusiones y posibles mejoras
 
 - **Conclusiones**: Crear est proyecto me ha permitido darme cuenta de lo horriblemente lento que he ido en este curso y de la increíble adversión que presento a CSS y PHP. Además de que he descubierto Laragon y lo usaré a partir de ahora en lugar de XAMPP
 
@@ -230,6 +216,11 @@ Link al anexo explicativo del manual de usuario: [Anexo II - Manual de usuario](
 
     - **Cifrado en contraseñas**: La comprobación y almacenamiento de estos datos está en texto plano, sin seguridad. Sería ideal cifrarlo y añadir seguridad
 
+    - **Mejora del sistema de niveles**: Actualmente Se necesita un JS y un HTML por nivel. La ide aprincipal era adaptar las funciones para que reciban como parámetros (desde la base de datos) el tempo del nivel y el array de aciertos.
+     Bien no sería necesario que se almacenase en la base de datos, ya que podría pasarse de otra manera, sería un dato interesante; Oytra mejora sería añadir un sistema de "alerta", donde una comprobación visual (como una exclamación o simbolo de alerta) avise al usuario sobre la necesidad de pulsar en breve.
+     La implementación sería con un segundo comprobador en la función principal y un segundo array con tiempos
+
+
     - **Mejoras de diseño**: Para disminuir la carga en ciertas partes, las animaciones se han mantenido al mínimo. Con más tiempo posiblemente podría llegarse a un equilibrio entre rendimiento y animaciones
 
     - **Edición de datos de los usuarios**: En el proyecto original se pretendía que el usuario pudiese cambiar de imagen de usuario a voluntad de entre las preestablecidas en la sección  con los datos de este
@@ -238,21 +229,21 @@ Link al anexo explicativo del manual de usuario: [Anexo II - Manual de usuario](
 
 Los recursos más importantes utilizados han sido los siguientes:
 
-- **Bootstrap**: [Documentación Bootrstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- **Bootstrap**: [Página oficial de Bootrstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
-- **Docker**: [Documentación Docker](https://docs.docker.com/) 
+- **Scroll de texto**: [Hubspot](https://blog.hubspot.com/website/scrolling-text-css) 
 
-- **Digital Oceans**: [Documentación Digital Oceans](https://docs.digitalocean.com/products/)
+- **Formularios varios PHP**: [StackOverFlow](https://stackoverflow.com/)
 
-- **Despliegue Docker en Digital Ocean**: [Tutorial en Github](https://gist.github.com/pixeline/6d57e68aa6c1357b14c14fe8e3b4b963)
+- **Contadores de tiempo**: [W3schools](https://www.w3schools.com/tags/av_event_timeupdate.asp)
 
-- **Preguntas sobre errores concretos del código**: [Herramienta ChatGPT]()
+- **Fuente de imágenes y audio**: 
+    - **KGraffiti**: [2 graffitis han sido extraidos de la siguiente Web](https://www.graffiti-empire.com/graffiti-generator/)
+    - **Audio**: [Link a youtube](https://www.youtube.com/watch?v=Fx2hJHWLoaI)
 
-- **Fuente de imágenes y datos**: Algunas imágenes e información de los productos han sido obtenidas en:
-    - **Kubekings**: [Enlace a la página](https://kubekings.com/)
-    - **Los Mundos de Rubik**: [Enlace a la página](https://www.losmundosderubik.es/es/)
-    - **Imgur**: [Enlace a la página](https://imgur.com/)
 
 ## Agradecimientos
-
-No.
+- A verónica por ayudarme con PHP
+- A Nick Von Leuween por hacerme un Elmont bailarín
+- A Lupi por traducirme un texto
+- A Néstor, que no me ha ayudado en absolutamente nada pero le debo 10 euros y me los perdona si lo incluyo
