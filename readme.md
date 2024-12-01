@@ -208,7 +208,7 @@ ForFunSake
 El manual de usuario, para hacerlo más acorde al proyecto, se presenta a continuación
  como un archivo separado, imitando el estilo de un manual de un videojuego
 
-Link al manual de usuario: [ Manual de usuario](\documentacion\manual.pdf)
+Link al manual de usuario: [ Manual de usuario](/documentacion/manual.pdf)
 
 ## 7.-Conclusiones y posibles mejoras
 
