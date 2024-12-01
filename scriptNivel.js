@@ -90,7 +90,7 @@ setInterval( function(){
 
 function pulsaBoton() {
 //debug
-    // dametiempos();
+    dametiempos();
         if (correcto==true){
         puntuacion = puntuacion + 1;
         correcto= false;
